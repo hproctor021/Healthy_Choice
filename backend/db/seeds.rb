@@ -13,10 +13,10 @@ Item.delete_all
 
 
 users = [
-    {name: 'Tom Lai', password: 't123', email: 'supertom888@gmail.com', phone_number: 2813308004},
-    {name: 'Haley Proctor', password: 't123', email: 'haleyp33@gmail.com', phone_number: 5123308005},
-    {name: 'Bob Siegel', password: 't123', email: 'bobbyc@gmail.com', phone_number: 5623308006},
-    {name: 'Devin Lonetree', password: 't123', email: 'jdlonetree@gmail.com', phone_number: 9013308007}
+    {name: 'Tom Lai', password: 't123', email: 'supertom888@gmail.com', phone_number: '281-330-8004'},
+    {name: 'Haley Proctor', password: 't123', email: 'haleyp33@gmail.com', phone_number: '512-330-8005'},
+    {name: 'Bob Siegel', password: 't123', email: 'bobbyc@gmail.com', phone_number: '562-330-8006'},
+    {name: 'Devin Lonetree', password: 't123', email: 'jdlonetree@gmail.com', phone_number: '901-330-8007'}
 ]
 
 users.each {| user | User.create(user)}
@@ -81,7 +81,7 @@ shopping_list_items = [
     {shopping_list_id: ShoppingList.first.id, item_id: Item.all[10].id},
     {shopping_list_id: ShoppingList.second.id, item_id: Item.third.id},
     {shopping_list_id: ShoppingList.second.id, item_id: Item.all[34].id},
-    {shopping_list_id: ShoppingList.third.id, item_id: Item.all[37].id},
+    {shopping_list_id: ShoppingList.third.id, item_id: Item.all[35].id},
     {shopping_list_id: ShoppingList.third.id, item_id: Item.first.id},
     {shopping_list_id: ShoppingList.third.id, item_id: Item.all[22].id},
     {shopping_list_id: ShoppingList.third.id, item_id: Item.all[27].id},
