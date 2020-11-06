@@ -15,8 +15,8 @@ Item.delete_all
 users = [
     {name: 'Tom Lai', password: 't123', email: 'supertom888@gmail.com', phone_number: 2813308004},
     {name: 'Haley Proctor', password: 't123', email: 'haleyp33@gmail.com', phone_number: 5123308005},
-    {name: 'Bob Siegel', password: 't123', email: 'supertom888@gmail.com', phone_number: 5623308006},
-    {name: 'Devin Lonetree', password: 't123', email: 'supertom888@gmail.com', phone_number: 9013308007}
+    {name: 'Bob Siegel', password: 't123', email: 'bobbyc@gmail.com', phone_number: 5623308006},
+    {name: 'Devin Lonetree', password: 't123', email: 'jdlonetree@gmail.com', phone_number: 9013308007}
 ]
 
 users.each {| user | User.create(user)}
@@ -53,24 +53,24 @@ items = [
     {image: 'https://www.istockphoto.com/photo/colorful-peppers-gm153564958-17345991', name: 'Peppers', price: 3.30, category: 'vegetable', calories: 18, quantity_remaining: 20},
     {image: 'https://www.istockphoto.com/photo/spinach-gm169983791-19611296', name: 'Spinach', price: 1.99, category: 'vegetable', calories: 21, quantity_remaining: 20},
 
-    {image: 'https://target.scene7.com/is/image/Target/GUEST_ff23a29e-13c6-49a8-bc6a-8b09529a2642?fmt=webp&wid=1400&qlt=80', name: 'Chicken Breasts', price: 12.99, category: meat, calories: 140, quantity_remaining: 20},
-    {image: 'https://target.scene7.com/is/image/Target/GUEST_3683fd09-8a30-4adc-83e1-d25ccacff95a?fmt=webp&wid=1400&qlt=80', name: 'Chicken Thighs', price: 8.99, category: meat, calories: 160, quantity_remaining: 20},
-    {image: 'https://d2d8wwwkmhfcva.cloudfront.net/800x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_d5418756-2891-44f8-8578-4c5aafa2c55d.jpeg', name: 'Lamb Rack', price: 14.99, category: meat, calories: 190, quantity_remaining: 20},
-    {image: , name: , price: , category: meat, calories: , quantity_remaining: 20},
-    {image: , name: , price: , category: meat, calories: , quantity_remaining: 20},
-    {image: , name: , price: , category: meat, calories: , quantity_remaining: 20},
-    {image: , name: , price: , category: meat, calories: , quantity_remaining: 20},
-    {image: , name: , price: , category: meat, calories: , quantity_remaining: 20},
-    {image: , name: , price: , category: meat, calories: , quantity_remaining: 20},
-    {image: , name: , price: , category: meat, calories: , quantity_remaining: 20},
+    {image: 'https://images.heb.com/is/image/HEBGrocery/000397586', name: 'Medium Firm Tofu', price: 2.51, category: 'meat', calories: 90, quantity_remaining: 20},
+    {image: 'https://target.scene7.com/is/image/Target/GUEST_3683fd09-8a30-4adc-83e1-d25ccacff95a?fmt=webp&wid=1400&qlt=80', name: 'Chicken Thighs', price: 8.99, category: 'meat', calories: 160, quantity_remaining: 20},
+    {image: 'https://d2d8wwwkmhfcva.cloudfront.net/800x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_d5418756-2891-44f8-8578-4c5aafa2c55d.jpeg', name: 'Lamb Rack', price: 14.99, category: 'meat', calories: 190, quantity_remaining: 20},
+    {image: 'https://i5.walmartimages.com/asr/09a0ba45-dd79-4b7c-8e58-d91e74ed8b49_1.da8bc8ad3c2b77aa43cf6de4eb389199.png?odnWidth=undefined&odnHeight=undefined&odnBg=ffffff', name: 'Duck Legs', price: 16.99, category: 'meat', calories: 150, quantity_remaining: 20},
+    {image: 'https://www.freshdirect.com/media/images/product/meat_2/mea_pid_3330079_z.jpg?lastModify=2014-07-09', name: 'Rib Eye Steak', price: 17.99, category: 'meat', calories: 170, quantity_remaining: 20},
+    {image: 'https://i5.walmartimages.com/asr/7e2204d6-8f48-46f6-82a2-a2f25106472f.24ba50dabe64a4dafa996a507114f28b.jpeg?odnWidth=undefined&odnHeight=undefined&odnBg=ffffff', name: 'Ground Turkey', price: 5.13, category: 'meat', calories: 140, quantity_remaining: 20},
+    {image: 'https://images.heb.com/is/image/HEBGrocery/000893296', name: 'Fresh Shrimp', price: 12.33, category: 'meat', calories: 99, quantity_remaining: 20},
+    {image: 'https://images.heb.com/is/image/HEBGrocery/000373352', name: 'Fresh Sea Scallops', price: 20.57, category: 'meat', calories: 90, quantity_remaining: 20},
+    {image: 'https://images.heb.com/is/image/HEBGrocery/000373324', name: 'Fresh American Snapper', price: 38.45, category: 'meat', calories: 275, quantity_remaining: 20},
+    {image: 'https://images.heb.com/is/image/HEBGrocery/000373464', name: 'Wild Caught Dungeness Crab', price: 14.39, category: 'meat', calories: 73, quantity_remaining: 20},
 
-    {image: , name: , price: , category: drink, calories: , quantity_remaining: 20},
-    {image: , name: , price: , category: drink, calories: , quantity_remaining: 20},
-    {image: , name: , price: , category: drink, calories: , quantity_remaining: 20},
-    {image: , name: , price: , category: drink, calories: , quantity_remaining: 20},
-    {image: , name: , price: , category: drink, calories: , quantity_remaining: 20},
-    {image: , name: , price: , category: drink, calories: , quantity_remaining: 20},
-    {image: , name: , price: , category: drink, calories: , quantity_remaining: 20}
+    {image: 'https://images.heb.com/is/image/HEBGrocery/000714263', name: 'Limeade', price: 2.41, category: 'drink', calories: 129, quantity_remaining: 20},
+    {image: 'https://images.heb.com/is/image/HEBGrocery/001828129', name: 'Fresh Orange Juice', price: 8.22, category: 'drink', calories: 130, quantity_remaining: 20},
+    {image: 'https://images.heb.com/is/image/HEBGrocery/000533893', name: 'Topo Chico', price: 8.64, category: 'drink', calories: 0, quantity_remaining: 20},
+    {image: 'https://images.heb.com/is/image/HEBGrocery/000716177', name: 'Valley of the Moon Pinot Noir', price: 20.58, category: 'drink', calories: 110, quantity_remaining: 20},
+    {image: 'https://images.heb.com/is/image/HEBGrocery/002222199', name: 'LaMarca prosecco', price: 13.37, category: 'drink', calories: 90, quantity_remaining: 20},
+    {image: 'https://images.heb.com/is/image/HEBGrocery/001878912', name: 'Kolsch Style Blone', price: 8.44, category: 'drink', calories: 130, quantity_remaining: 20},
+    {image: 'https://images.heb.com/is/image/HEBGrocery/000220949', name: 'Shiner Holiday Cheer', price: 8.21, category: 'drink', calories: 140, quantity_remaining: 20}
 ]
 
 items.each {| item | Item.create(item)}
