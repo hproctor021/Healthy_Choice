@@ -17,7 +17,7 @@ const ItemCard = ({ item }) => {
 
         <div>
              <Card className='card'>
-                <Card.Img variant="top" src={item.image} />
+                <Card.Img variant="top" src={item.image} className='item-avatar' />
                 <Card.Body>
                 <Card.Title>{item.name}</Card.Title>
                 <Card.Text>
