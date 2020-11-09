@@ -11,6 +11,7 @@ class Header extends Component {
         <h1 className="text-center">Healthy Choice</h1>
         <Search />
 
+
         <User />
 
         <ShoppingList />

@@ -10,6 +10,7 @@ const ItemCard = ({ item }) => {
         //     <h4>{item.name}</h4>
         //     <h5>${item.price}</h5>
         //     <p>{item.calories} Calories per Serving</p>
+
             
         // </div>
 
