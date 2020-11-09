@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import UserForm from './UserForm'
+import UserUpdateForm from './UserUpdateForm'
 
 
 class User extends Component {
@@ -10,7 +10,7 @@ class User extends Component {
     render() {
         return(
             <div>
-                <UserForm />
+                <UserUpdateForm />
             </div>
         )
     }

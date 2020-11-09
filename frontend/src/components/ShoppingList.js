@@ -1,12 +1,12 @@
 import React from 'react';
-import Item from './ItemCard';
+import ListCard from './ListCard';
 
 
 class ShoppingList extends React.Component {
     render(){
         return(
             <div>
-                <Item />
+                <ListCard />
             </div>
         )
     }
