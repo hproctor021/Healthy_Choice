@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import Header from './Header'
 import ItemContainer from './ItemContainer'
