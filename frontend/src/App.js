@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './App.css'
 import LoginPage from './components/LoginPage'
 import ShoppingPage from './components/ShoppingPage'
 

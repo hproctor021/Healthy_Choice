@@ -1,4 +1,3 @@
-import Header from './components/Header'
 import React, { Component } from 'react';
 import Header from './Header'
 import ItemContainer from './ItemContainer'
@@ -32,7 +31,7 @@ class ShoppingPage extends Component {
             <div>
                 <Header />
 
-                <ItemContainer />
+                <ItemContainer items={this.state.items}/>
             </div>
         )
     }

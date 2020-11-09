@@ -6,7 +6,10 @@ class ItemContainer extends Component {
     render(){
         return(
             <div>
-                <ItemCard />
+                {this.props.items.map(item => {
+                    return <ItemCard 
+                    item={item} />
+                } )}
             </div>
         )
     }
