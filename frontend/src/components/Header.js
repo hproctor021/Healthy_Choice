@@ -8,6 +8,7 @@ import {Navbar, Form, Button, Nav, FormControl } from 'react-bootstrap';
 class Header extends Component {
 
   state = {
+
     display: false
   }
 
@@ -34,13 +35,14 @@ class Header extends Component {
 
             <Form inline>
               <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-              <Button variant="outline-primary">Shopping List</Button>
+              <Button onClick={() => this.handleClick()} variant="outline-primary">Shopping List</Button>
             </Form>
           </Navbar>
 
           <Search />
 
           {/* <User /> */}
+
 
           { this.state.display
             ? <ShoppingList />
@@ -49,6 +51,7 @@ class Header extends Component {
           </header>
         </div>
     
+
     );
   }
 

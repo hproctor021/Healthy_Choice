@@ -10,8 +10,7 @@ class ShoppingPage extends Component {
 
     state = {
         items: [],
-        filter: "",
-        clicked:""
+
     }
 
     componentDidMount(){
@@ -25,11 +24,14 @@ class ShoppingPage extends Component {
       })
     }
 
+    
 
     render(){
         return(
             <div>
-                <Header />
+                <Header/>
+                
+
 
                 <ItemContainer items={this.state.items}/>
             </div>
