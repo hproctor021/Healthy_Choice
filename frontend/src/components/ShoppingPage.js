@@ -9,8 +9,9 @@ class ShoppingPage extends Component {
 
 
     state = {
-        items: []
-
+        items: [],
+        filter: "",
+        clicked:""
     }
 
     componentDidMount(){
@@ -22,7 +23,6 @@ class ShoppingPage extends Component {
               items
           })
       })
-
     }
 
 
