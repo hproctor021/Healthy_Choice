@@ -5,6 +5,19 @@ import ShoppingList from './ShoppingList';
 
 class Header extends Component {
 
+  state = {
+    display:false,
+}
+
+  handleClick = () => {
+    console.log("you can see me ")
+    let newBoolean = !this.state.display
+    this.setState({
+        display: newBoolean
+    })
+}
+
+
   render() {
     return (
       <div>
@@ -14,7 +27,14 @@ class Header extends Component {
 
         <User />
 
-        <ShoppingList />
+        
+        { this.state.display
+                    ?
+                    <ShoppingList/>
+                    :
+                    null
+        }
+        <button onClick={() => this.handleClick()}>show the List</button>
       </div>
     );
   }

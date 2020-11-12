@@ -9,8 +9,8 @@ class ShoppingPage extends Component {
 
 
     state = {
-        items: []
-
+        items: [],
+    
     }
 
     componentDidMount(){
@@ -25,11 +25,14 @@ class ShoppingPage extends Component {
 
     }
 
+    
 
     render(){
         return(
             <div>
-                <Header />
+                <Header/>
+                
+
 
                 <ItemContainer items={this.state.items}/>
             </div>
