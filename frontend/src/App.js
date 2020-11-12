@@ -4,6 +4,7 @@ import LoginPage from './components/LoginPage'
 import ShoppingPage from './components/ShoppingPage'
 import LoginForm from './components/LoginForm'
 import SignupForm from './components/SignupForm'
+import UserUpdateForm from './components/UserUpdateForm'
 // import Header from './components/Header'
 import {BrowserRouter as Router , Route} from 'react-router-dom'
 
@@ -12,7 +13,7 @@ import {BrowserRouter as Router , Route} from 'react-router-dom'
 
 class App extends Component {
    
-    
+
 
     render() {
         return (
@@ -42,6 +43,15 @@ class App extends Component {
               path='/Signup'
               render={routeProps =>
               <SignupForm 
+              {...routeProps}/>
+              } 
+            />
+
+            <Route 
+              exact 
+              path='/UpdateUser/id'
+              render={routeProps =>
+              <UserUpdateForm
               {...routeProps}/>
               } 
             />

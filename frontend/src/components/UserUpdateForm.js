@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import { Button, Card, Form } from 'react-bootstrap';
+import { useHistory } from "react-router";
 
+let userURL = 'http://localhost:3000/users'
 
 export default function UserUpdateForm() {
+
+    const history = useHistory();
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -16,7 +20,10 @@ export default function UserUpdateForm() {
         Phone Number: ${phone_number}
       `);
   
-      event.preventDefault();
+        event.preventDefault();
+        history.push({
+            pathname: '/grocery'
+        })
     }
 
         return(
@@ -24,7 +31,7 @@ export default function UserUpdateForm() {
                 <center>
                 <Card border="secondary" style={{ height: '34rem', width: '27rem'}}>
 
-                    <Card.Title as='h3'>Create an Account</Card.Title>
+                    <Card.Title as='h3'>Update Account Information</Card.Title>
                     <Card.Body>
 
                     <Form onSubmit={handleSubmit}>
@@ -71,7 +78,7 @@ export default function UserUpdateForm() {
                         <Button 
                             variant="primary" 
                             type="submit"
-                            onSubmit={this.handleSubmit}>
+                            onSubmit={handleSubmit}>
                             Submit
                         </Button>
                         
