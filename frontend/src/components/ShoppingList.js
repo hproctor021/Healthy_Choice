@@ -6,6 +6,7 @@ class ShoppingList extends React.Component {
     render(){
         return(
             <div>
+                <h3>Shopping List</h3>
                 <ListCard />
             </div>
         )
