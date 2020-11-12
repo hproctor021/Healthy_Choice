@@ -10,7 +10,7 @@ class ShoppingPage extends Component {
 
     state = {
         items: [],
-    
+
     }
 
     componentDidMount(){
@@ -22,7 +22,6 @@ class ShoppingPage extends Component {
               items
           })
       })
-
     }
 
     

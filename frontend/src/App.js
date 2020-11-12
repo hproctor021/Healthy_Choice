@@ -2,23 +2,53 @@ import React, { Component } from 'react';
 import './App.css'
 import LoginPage from './components/LoginPage'
 import ShoppingPage from './components/ShoppingPage'
-
-// // import {BrowserRouter as Router , Route} from 'react-router-dom'
+import LoginForm from './components/LoginForm'
+import SignupForm from './components/SignupForm'
+// import Header from './components/Header'
+import {BrowserRouter as Router , Route} from 'react-router-dom'
 
 
 
 
 class App extends Component {
-
    
+    
 
     render() {
         return (
-                <div>
-                   <LoginPage />
+          <Router>
+            {/* <Header /> */}
 
-                   <ShoppingPage />
-                </div>
+            <Route 
+              exact 
+              path='/'
+              render={routeProps =>
+              <LoginPage 
+              {...routeProps}/>
+              } 
+            />
+
+          <Route 
+              exact 
+              path='/Login'
+              render={routeProps =>
+              <LoginForm 
+              {...routeProps}/>
+              } 
+            />
+
+            <Route 
+              exact 
+              path='/Signup'
+              render={routeProps =>
+              <SignupForm 
+              {...routeProps}/>
+              } 
+            />
+            
+            <Route exact path='/grocery' component={ShoppingPage} />
+
+          </Router>    
         )
     }
 }
