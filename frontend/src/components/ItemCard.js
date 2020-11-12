@@ -11,7 +11,7 @@ const ItemCard = ({ item }) => {
         <Card className='m-3' style={{ width: '18rem', height: '30rem' }}>
               <Card.Img variant='top' src={item.image} />
               <Card.Body>
-                <Card.Title>{item.price}</Card.Title>
+                <Card.Title>${item.price}</Card.Title>
                 {/* <Link to={`/products/${product.id}`}>Product</Link> */}
                 
                     {item.name}<br/>

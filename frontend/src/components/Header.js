@@ -27,7 +27,7 @@ class Header extends Component {
             <Navbar.Brand href="#home">Healthy Choice</Navbar.Brand>
             <Nav className="mr-auto">
 
-            <LinkContainer to='/UserUpdateForm'>
+            <LinkContainer to='/UpdateUser/id'>
             <Nav.Link>Update Account</Nav.Link>
             </LinkContainer>
             </Nav>
