@@ -19,6 +19,8 @@ class Header extends Component {
     })
   }
 
+  
+
   render() {
     return (
     
@@ -34,18 +36,18 @@ class Header extends Component {
             </Nav>
 
             <Form inline>
-              <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+              <FormControl onChange={(e)=> this.props.handleSearch(e)} type="text" placeholder="Search" className="mr-sm-2" />
               <Button onClick={() => this.handleClick()} variant="outline-primary">Shopping List</Button>
             </Form>
           </Navbar>
 
-          <Search />
+          <Search handleSearch={this.props.handleSearch}/>
 
           {/* <User /> */}
 
 
           { this.state.display
-            ? <ShoppingList />
+            ? <ShoppingList shoppingList={this.props.shoppingList} />
             : null
           }
           </header>
