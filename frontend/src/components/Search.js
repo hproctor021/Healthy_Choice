@@ -10,7 +10,7 @@ class Search extends Component {
                     <input
                         type="text"
                         placeholder={"Search"}
-                        onChange={(e) => props.handleSearch(e.target.value)}
+                        onChange={(e) => this.props.handleSearch(e)}
                     />
                 </div> */}
                 

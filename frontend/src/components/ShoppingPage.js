@@ -10,6 +10,8 @@ class ShoppingPage extends Component {
 
     state = {
         items: [],
+        searchValue: '',
+        shoppingList: []
 
     }
 
@@ -24,16 +26,41 @@ class ShoppingPage extends Component {
       })
     }
 
+    handleSearch =(e) => {
+        console.log(e.target.value)
+        let searchValue = e.target.value
+        this.setState({
+            searchValue: searchValue
+        })
+    }
+
+    displaySearch =(e) => {
+        let displayItem = this.state.items.filter(item => item.name.toLowerCase().includes(this.state.searchValue.toLowerCase()))
+        return displayItem
+    }
+
+    addItem = (listCard) => {
+        console.log("add me in")
+        this.setState({
+            shoppingList: [...this.state.shoppingList, listCard]
+        })
+    }
+
+
     
 
     render(){
         return(
             <div>
-                <Header/>
+                <Header handleSearch={this.handleSearch}
+                shoppingList={this.state.shoppingList}
+                />
                 
 
 
-                <ItemContainer items={this.state.items}/>
+                <ItemContainer items={this.displaySearch()}
+                addItem={this.addItem}
+                />
             </div>
         )
     }

@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, Button, Container} from 'react-bootstrap'
 
 
-const ItemCard = ({ item }) => {
+const ItemCard = ({ item, addItem }) => {
     
     return(
       
@@ -17,7 +17,7 @@ const ItemCard = ({ item }) => {
                     {item.name}<br/>
                     <small className="text-muted">{item.calories} calories per serving</small>
 
-                 <Button variant="outline-primary">Add to Shopping List</Button>               
+                 <Button onClick={(e)=>addItem({item})} variant="outline-primary">Add to Shopping List</Button>               
                  
  
                 </Card.Body>
