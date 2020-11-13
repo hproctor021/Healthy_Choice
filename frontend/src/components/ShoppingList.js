@@ -1,5 +1,6 @@
 import React from 'react';
 import ListCard from './ListCard';
+import { Button } from 'react-bootstrap';
 
 
 class ShoppingList extends React.Component {
@@ -18,6 +19,10 @@ class ShoppingList extends React.Component {
         // })
     }
 
+    checkOut = () => {
+        console.log('pay up, sukka!')
+    }
+
     render(){
         return(
             <div>
@@ -29,6 +34,13 @@ class ShoppingList extends React.Component {
                     )
                 })}
                 <h6>total price:{this.totalPrice()}</h6>
+                <form onSubmit={this.checkOut}>
+                    <Button
+                        type='submit'>
+                    Check Out
+                    </Button>
+                </form>
+
             </div>
         )
     }

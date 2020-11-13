@@ -19,28 +19,10 @@ const ItemCard = ({ item, addItem }) => {
 
                  <Button onClick={(e)=>addItem({item})} variant="outline-primary">Add to Shopping List</Button>               
                  
- 
                 </Card.Body>
-                {/* <Card.Footer>
-                <small className="text-muted">{item.calories} calories per serving</small>
-                </Card.Footer> */}
             </Card>
 
         
-            //  <Card className='m-3' >
-            //     <Card.Img variant="top" src={item.image} className='image-avatar'/>
-            //     <Card.Body>
-            //     <Card.Title as='div'>${item.price}</Card.Title>
-            //     <Card.Text as='h3'>
-            //         {item.name}
-            //     <Button variant="outline-primary">Add to Shopping List</Button>
-                    
-            //     </Card.Text>
-            //     </Card.Body>
-            //     <Card.Footer>
-            //     <small className="text-muted">{item.calories} calories per serving</small>
-            //     </Card.Footer>
-            // </Card>
             
      
 
