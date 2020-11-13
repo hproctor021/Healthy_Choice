@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Card, Form } from 'react-bootstrap';
+import BlankHeader from './BlankHeader'
+
 
 
 let userURL = 'http://localhost:3000/users'
@@ -44,6 +46,7 @@ class LoginForm extends Component {
     render(){
         return(
             <div>
+                <BlankHeader />
                 <center>
                 <Card border="secondary" style={{ width: '18rem' }}>
                 <br></br>

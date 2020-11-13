@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { Button, Nav, Card } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-// import { BrowserRouter as Router, Route } from 'react-router-dom';
-// import LoginForm from './LoginForm';
-// import SignupForm from './SignupForm';
+import BlankHeader from './BlankHeader'
+
 
 let userURL = 'http://localhost:300/users'
 
@@ -51,6 +50,7 @@ class LoginPage extends Component {
                 
                 <center>
                 <div>
+                    <BlankHeader />
                    
                     <Card border="secondary" style={{ width: '18rem'}}>
                         <br></br>
