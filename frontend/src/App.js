@@ -7,6 +7,7 @@ import SignupForm from './components/SignupForm'
 // import Header from './components/Header'
 import {BrowserRouter as Router , Route} from 'react-router-dom'
 import CheckOut from './components/CheckOut'
+import UserUpdateForm from './components/UserUpdateFormg'
 
 
 
@@ -43,6 +44,14 @@ class App extends Component {
               path='/Signup'
               render={routeProps =>
               <SignupForm 
+              {...routeProps}/>
+              } 
+            />
+            <Route 
+              exact 
+              path='/UpdateUser/id'
+              render={routeProps =>
+              <UserUpdateForm
               {...routeProps}/>
               } 
             />
