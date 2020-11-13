@@ -46,6 +46,7 @@ class ShoppingList extends React.Component {
                 })}
 
                 <h6>Total price:{this.totalPrice()}</h6>
+                
                {/* <form onSubmit={this.checkOut}><Button type='submit' variant='success'><strong>Check Out</strong></Button></form> */}
                <Button onClick={this.checkOut} type='submit' variant='success'><strong>Proceed to Check Out</strong></Button>
 
