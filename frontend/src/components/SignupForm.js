@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Button, Card, Form, Alert } from 'react-bootstrap';
 import { useHistory } from "react-router";
+import BlankHeader from './BlankHeader'
+
 
 
 
@@ -32,6 +34,7 @@ export default function SignUpForm() {
 
         return(
              <div>
+                 <BlankHeader />
                 <center>
                 <Card border="secondary" style={{ height: '34rem', width: '27rem'}}>
 
