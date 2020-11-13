@@ -5,7 +5,7 @@ import ShoppingPage from './components/ShoppingPage'
 import LoginForm from './components/LoginForm'
 import SignupForm from './components/SignupForm'
 import UserUpdateForm from './components/UserUpdateForm'
-// import Header from './components/Header'
+import Header from './components/Header'
 import {BrowserRouter as Router , Route} from 'react-router-dom'
 import CheckOut from './components/CheckOut'
 
@@ -14,6 +14,11 @@ import CheckOut from './components/CheckOut'
 
 class App extends Component {
    
+
+  // state of total
+  // pull function from shopping list , 
+  // pass back into shopping list component --> this to set state 
+  // in App & pass state to Checkout Component
 
 
     render() {

@@ -21,6 +21,7 @@ export default function UserUpdateForm() {
       `);
   
         event.preventDefault();
+        alert("Your account was successfully updated!")
         history.push({
             pathname: '/grocery'
         })

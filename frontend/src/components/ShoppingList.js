@@ -26,6 +26,7 @@ class ShoppingList extends React.Component {
     }
     checkOut = (param) =>{
         console.log("pay the money")
+        // include State - total to pass to checkout component ** move this function to App.js
         this.props.history.push({
             pathname: '/checkout',
             total: param
