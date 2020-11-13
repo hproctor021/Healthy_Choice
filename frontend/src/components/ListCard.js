@@ -5,7 +5,8 @@ const ListCard = (props) => {
     
     return(
         <div>
-            <h5 className="card-title"> {props.listItem.item.name} - {props.listItem.item.price} </h5>
+            <p className="card-title"> <strong>{props.listItem.item.name} - {props.listItem.item.price}</strong> <button onClick={(e)=>{props.removeItem(props.listItem)}} type='button' class='btn-warning btn-circle'><i class='fa fa-times'><strong>X</strong></i></button></p> 
+            
             
             
         </div>

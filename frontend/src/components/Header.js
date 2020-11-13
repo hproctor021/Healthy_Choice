@@ -47,7 +47,7 @@ class Header extends Component {
 
 
           { this.state.display
-            ? <ShoppingList shoppingList={this.props.shoppingList} />
+            ? <ShoppingList shoppingList={this.props.shoppingList} removeItem={this.props.removeItem}/>
             : null
           }
           </header>
