@@ -6,9 +6,10 @@ const ListCard = (props) => {
     
     return(
         <div>
-            <h6> {props.listItem.item.name}  -  ${props.listItem.item.price}
-                <Button variant="primary"><small> X </small> </Button>
-            </h6>
+
+            <p className="card-title"> <strong>{props.listItem.item.name} - ${props.listItem.item.price}</strong> <button onClick={(e)=>{props.removeItem(props.listItem)}} type='button' class='btn-warning btn-circle'><i class='fa fa-times'><strong>X</strong></i></button></p> 
+                  
+
         </div>
     )
 }

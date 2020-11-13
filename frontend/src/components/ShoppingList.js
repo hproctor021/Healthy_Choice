@@ -3,25 +3,33 @@ import ListCard from './ListCard';
 import { Button } from 'react-bootstrap';
 
 
+
 class ShoppingList extends React.Component {
-
+    // let history = useHistory();
     state ={
-        total: ''
+        total: '',
+        checkout: []
     }
 
-    // let eachListCard =
-
+   
+    // add the total price 
     totalPrice=()=>{
-        console.log('spending money')
-        // let totalPrice = this.state.total + this.
-        // this.setState({
-        //     tota
+        let total = 0
+        this.props.shoppingList.map(item => {
+        total = total+ item.item.price
+        })
+        total=total.toFixed(2) //set it for only 2
+        return total
+        
+    }
+    checkOut = () =>{
+        console.log("pay the money")
+        // history.push({
+        //     pathname: '/checkout'
         // })
+      
     }
 
-    checkOut = () => {
-        console.log('pay up, sukka!')
-    }
 
     render(){
         return(
@@ -30,16 +38,14 @@ class ShoppingList extends React.Component {
                 {this.props.shoppingList.map((listItem)=>{
                 return(
                     
-                    <ListCard listItem={listItem} />
+                    <ListCard listItem={listItem} 
+                    removeItem ={this.props.removeItem}/>
                     )
                 })}
-                <h6>total price:{this.totalPrice()}</h6>
-                <form onSubmit={this.checkOut}>
-                    <Button
-                        type='submit'>
-                    Check Out
-                    </Button>
-                </form>
+
+                <h6>Total price:{this.totalPrice()}</h6>
+               {/* <form onSubmit={this.checkOut}><Button type='submit' variant='success'><strong>Check Out</strong></Button></form> */}
+               <Button onClick={this.checkOut} type='submit' variant='success'><strong>Check Out</strong></Button>
 
             </div>
         )

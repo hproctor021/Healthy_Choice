@@ -46,6 +46,13 @@ class ShoppingPage extends Component {
         })
     }
 
+    removeItem = (e) =>{
+        console.log("NOOOOOOO")
+        this.setState({
+            shoppingList: this.state.shoppingList.filter(eachItem => eachItem !== e )
+        })
+    }
+
 
     
 
@@ -54,6 +61,7 @@ class ShoppingPage extends Component {
             <div>
                 <Header handleSearch={this.handleSearch}
                 shoppingList={this.state.shoppingList}
+                removeItem={this.removeItem}
                 />
                 
 
