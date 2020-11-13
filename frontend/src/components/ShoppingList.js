@@ -21,14 +21,14 @@ class ShoppingList extends React.Component {
         total = total+ item.item.price
         })
         total=total.toFixed(2) //set it for only 2
-        return total
-        
+        return total  
     }
-    checkOut = (param) =>{
+
+    checkOut = () =>{
         console.log("pay the money")
+        // include State - total to pass to checkout component ** move this function to App.js
         this.props.history.push({
-            pathname: '/checkout',
-            total: param
+            pathname: '/checkout'
         });
     }
 
@@ -45,8 +45,8 @@ class ShoppingList extends React.Component {
                     )
                 })}
 
-                <h6>Total price:{this.totalPrice()}</h6>
-                
+                <h6>Total price:  ${this.totalPrice()}</h6>
+
                {/* <form onSubmit={this.checkOut}><Button type='submit' variant='success'><strong>Check Out</strong></Button></form> */}
                <Button onClick={this.checkOut} type='submit' variant='success'><strong>Proceed to Check Out</strong></Button>
 

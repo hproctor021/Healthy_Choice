@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Button, Card, Form } from 'react-bootstrap';
 import { useHistory } from "react-router";
+import BlankHeader from './BlankHeader'
+
 
 let userURL = 'http://localhost:3000/users'
 
@@ -21,6 +23,7 @@ export default function UserUpdateForm() {
       `);
   
         event.preventDefault();
+        alert("Your account was successfully updated!")
         history.push({
             pathname: '/grocery'
         })
@@ -28,6 +31,7 @@ export default function UserUpdateForm() {
 
         return(
              <div>
+                 <BlankHeader />
                 <center>
                 <Card border="secondary" style={{ height: '34rem', width: '27rem'}}>
 
