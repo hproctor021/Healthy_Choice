@@ -13,17 +13,7 @@ class Search extends Component {
                         onChange={(e) => this.props.handleSearch(e)}
                     />
                 </div> */}
-
-
-                {/* drop down categoy menu */}
-                {/* <label>
-                    <select onChange= {(e) => props.handleFilter(e.target.value)}>
-                    <option value="fruit">Fruit</option>
-                    <option value="meat">Meat</option>
-                    <option value="vegetable">Vegetable</option>
-                    <option value="drink">Drink</option>
-                    </select>
-                </label> */}
+                
             </div>
         )
     }
