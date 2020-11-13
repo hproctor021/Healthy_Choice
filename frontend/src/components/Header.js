@@ -5,12 +5,26 @@ import ShoppingList from './ShoppingList';
 import { LinkContainer } from 'react-router-bootstrap';
 import {Navbar, Form, Button, Nav, FormControl } from 'react-bootstrap';
 
+let userURL = 'http://localhost:3000/users'
+
 class Header extends Component {
 
   state = {
-
-    display: false
+    users: [],
+    display: false,
+    shoppingList: "",
+    loginUser: ""
   }
+
+  componentDidMount(){
+    fetch(userURL)
+    .then(res =>res.json())
+    .then(users => {
+      this.setState({
+        users
+      })
+    })
+  } 
 
   handleClick = () => {
     let newBoolean = !this.state.display
@@ -19,6 +33,14 @@ class Header extends Component {
     })
   }
 
+  // updateUser = () => {
+
+  //   let currentUser = this.state.users.filter((user => user.id === ))
+  //   this.setState({
+  //     loginUser: this.state.users.filter(( ))
+  //   })
+
+  // }
   
 
   render() {
@@ -30,7 +52,7 @@ class Header extends Component {
             <Navbar.Brand href="#home">Healthy Choice</Navbar.Brand>
             <Nav className="mr-auto">
 
-            <LinkContainer to='/UserUpdateForm'>
+            <LinkContainer to='/UpdateUser/id'>
             <Nav.Link>Update Account</Nav.Link>
             </LinkContainer>
             </Nav>

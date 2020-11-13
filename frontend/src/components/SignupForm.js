@@ -1,23 +1,34 @@
 import React, { useState } from 'react';
-import { Button, Card, Form } from 'react-bootstrap';
+import { Button, Card, Form, Alert } from 'react-bootstrap';
+import { useHistory } from "react-router";
+
 
 
 export default function SignUpForm() {
+
+    const history = useHistory();
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [phone_number, setPhoneNumber] = useState("");
   
-    const handleSubmit = (event) => {
+
+    const handleSubmit = (e) => {
       console.log(`
         Name: ${name}
         Email: ${email}
         Password: ${password}
         Phone Number: ${phone_number}
       `);
-  
-      event.preventDefault();
+
+        e.preventDefault();
+        history.push({
+            pathname: '/grocery'
+        })
+       
+
     }
+
 
         return(
              <div>
