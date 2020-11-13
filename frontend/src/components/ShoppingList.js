@@ -1,11 +1,13 @@
 import React from 'react';
 import ListCard from './ListCard';
 import { Button } from 'react-bootstrap';
+import { withRouter } from 'react-router-dom'
 
 
 
 class ShoppingList extends React.Component {
-    // let history = useHistory();
+
+
     state ={
         total: '',
         checkout: []
@@ -22,19 +24,19 @@ class ShoppingList extends React.Component {
         return total
         
     }
-    checkOut = () =>{
+    checkOut = (param) =>{
         console.log("pay the money")
-        // history.push({
-        //     pathname: '/checkout'
-        // })
-      
+        this.props.history.push({
+            pathname: '/checkout',
+            total: param
+        });
     }
 
 
     render(){
         return(
             <div>
-                <h3>Shopping List</h3>
+                <h3>Shopping List:</h3>
                 {this.props.shoppingList.map((listItem)=>{
                 return(
                     
@@ -45,11 +47,11 @@ class ShoppingList extends React.Component {
 
                 <h6>Total price:{this.totalPrice()}</h6>
                {/* <form onSubmit={this.checkOut}><Button type='submit' variant='success'><strong>Check Out</strong></Button></form> */}
-               <Button onClick={this.checkOut} type='submit' variant='success'><strong>Check Out</strong></Button>
+               <Button onClick={this.checkOut} type='submit' variant='success'><strong>Proceed to Check Out</strong></Button>
 
             </div>
         )
     }
 }
 
-export default ShoppingList;
+export default withRouter(ShoppingList);
